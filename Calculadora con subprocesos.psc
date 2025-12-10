@@ -6,21 +6,19 @@ SubProceso Sumar(a)
 	
 	Escribir "Haz seleccionado la opción de sumar. Ingresa la cantidad de números que quieres sumar:";
 	leer cant;
-	
 	dimension numeritos[cant];
-	result <- 0;
-	Para i<-0 Hasta cant-1 Hacer
-		Limpiar Pantalla;
+	
+	Escribir "Ingrese su primer número y presione ENTER:";
+	Leer numeritos[0];
+	result <- numeritos[0];
+	
+	Para i<-1 Hasta cant-1 Hacer
 		
-		Escribir "Ingrese el número ", i+1, " de ", cant, " y presione ENTER";
 		Escribir "Tu total hasta ahora es ", result;
-		si i=0 Entonces
-			leer numeritos[i];
-			result <- numeritos[i];
-		SiNo
-			leer numeritos[i];
-			result <- result - numeritos [i];
-		FinSi
+		Escribir "Ingrese el número ", i+1, " de ", cant, " y presione ENTER";
+		Leer  numeritos[i]; 
+		result <- result + numeritos[i];
+		Limpiar Pantalla;
 		
 	Fin Para
 	
@@ -38,15 +36,20 @@ SubProceso Restar(b)
 	
 	Escribir "Haz seleccionado la opción de Restar. Ingresa la cantidad de números que quieres restar:";
 	leer cant;
-	
 	dimension numeritos[cant];
-	result <- 0;
 	
-	Para i<-0 Hasta cant-1 Hacer
-		Escribir "Ingrese el número ", i+1, " de ", cant, " y presione ENTER";
+	Escribir "Ingrese su primer número y presione ENTER:";
+	Leer numeritos[0];
+	result <- numeritos[0];
+	
+	Para i<-1 Hasta cant-1 Hacer
+		
 		Escribir "Tu total hasta ahora es ", result;
-		leer numeritos[i];
+		Escribir "Ingrese el número ", i+1, " de ", cant, " y presione ENTER";
+		Leer  numeritos[i]; 
 		result <- result - numeritos[i];
+		Limpiar Pantalla;
+		
 	Fin Para
 	
 	Escribir "El resultado de su resta ha sido: ", result;
@@ -65,15 +68,20 @@ SubProceso  Dividir(c)
 	
 	Escribir "Haz seleccionado la opción de dividir. Ingresa la cantidad de números que quieres dividir:";
 	leer cant;
-	
 	dimension numeritos[cant];
-	result <- 0;
 	
-	Para i<-0 Hasta cant-1 Hacer
-		Escribir "Ingrese el número ", i+1, " de ", cant, " y presione ENTER";
+	Escribir "Ingrese su primer número y presione ENTER:";
+	Leer numeritos[0];
+	result <- numeritos[0];
+	
+	Para i<-1 Hasta cant-1 Hacer
+		
 		Escribir "Tu total hasta ahora es ", result;
-		leer numeritos[i];
+		Escribir "Ingrese el número ", i+1, " de ", cant, " y presione ENTER";
+		Leer  numeritos[i]; 
 		result <- result / numeritos[i];
+		Limpiar Pantalla;
+		
 	Fin Para
 	
 	Escribir "El resultado de su división ha sido: ", result;
@@ -89,18 +97,23 @@ SubProceso  Multiplicar(d)
 	
 	Definir cant, i Como Entero;
 	Definir result, numeritos Como Real;
-	
+
 	Escribir "Haz seleccionado la opción de multiplicar. Ingresa la cantidad de números que quieres multiplicar:";
-	leer cant;
-	
+	leer cant;	
 	dimension numeritos[cant];
-	result <- 0;
 	
-	Para i<-0 Hasta cant-1 Hacer
-		Escribir "Ingrese el número ", i+1, " de ", cant, " y presione ENTER";
+	Escribir "Ingrese su primer número y presione ENTER:";
+	Leer numeritos[0];
+	result <- numeritos[0];
+	
+	Para i<-1 Hasta cant-1 Hacer
+		
 		Escribir "Tu total hasta ahora es ", result;
-		leer numeritos[i];
+		Escribir "Ingrese el número ", i+1, " de ", cant, " y presione ENTER";
+		Leer  numeritos[i]; 
 		result <- result * numeritos[i];
+		Limpiar Pantalla;
+		
 	Fin Para
 	
 	Escribir "El resultado de su multiplicación ha sido: ", result;
